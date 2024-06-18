@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Uroza Martinez Esmeralda
+    trabajé con Chavez Diaz Diana Alondra-->
+<!-- informa al navegador qué lenguaje se usó para escribir el documento. -->
+<html lang="en">
+<!--agregue un atributo lang a la etiqueta html para establecer el idioma por defecto de la página-->
+<head>
+    <!--Contiene la información general del documento (incluye título, scripts, y style)-->
+    <meta charset="UTF-8" />
+    <!--representa varios tipos de metadatos que no se pueden expresar utilizando los elementos
+         título, base, enlace, estilo y script.-->
+    <title>Proyecto 2do parcial</title>
+   
+    <!--Contiene el título-->
+    <style>
+    </style>
+</head>
+<body>
+    <!--Representa el contenido de un documento HTML-->
+    <canvas id="myCanvas">
+        <!--El elemento HTML canvas se puede utilizar para dibujar gráficos a través de
+            secuencias de comandos (por lo general JavaScript ).-->
+    </canvas>
+
+    <!-- Aquí va todo el código de three.js -->
+    <!-- script type="importmap" importa las librerías necesarias para three.js-->
+
+
+    <script src="./font/Stocky_Regular.js">
+    </script>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "./js/three.module.js",
+            "three/OrbitControls": "./js/OrbitControls.js"
+          }
+        }
+    </script>
+    <!-- Aquí va todo el código de three.js -->
+    <script type="module">
+        // 📚  Librerías importadas para hacer funcionar three.js y el OrbitControls y font
+        //💙nuevas librerias
+        import { TextGeometry } from "./js/TextGeometry.js";
+        import { FontLoader } from "./js/FontLoader.js";
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/OrbitControls';
+        import { RoundedBoxGeometry } from "./js/RoundedBoxGeometry.js";
+
+        //   console.log(OrbitControls);
+
+        //🕹️🕹️ Renderer - Realiza una conexión entre el código y el canvas
+        var renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById('myCanvas'),
+            antialias: true,
+        });
+        renderer.setPixelRatio(window.decivePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x89E9FA);
+
+
+        // 🎬 Creando nueva escena - Es el espacio donde se colocan los objetos
+        var scene = new THREE.Scene();
+
+        //🎥🎥 Agregar una cámara de perspectiva
+        var camera = new THREE.PerspectiveCamera(
+            70,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            500
+        );
+        scene.add(camera);
+
+        //Settings de la cámara
+        camera.position.set(0, 20, 50);
+
+        // Añadiendo los OrbitControls
+        var controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+
+        // Código para realizar objetos
+        var gridHelper = new THREE.GridHelper(200, 150);
+        scene.add(gridHelper);
+
+        var axesHelper = new THREE.AxesHelper(25);
+        scene.add(axesHelper);
+
+
+        //🖤SOMBRA
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFShadowMap;
+
+        //🤍LUZ
+        var light = new THREE.DirectionalLight(0xffffff, 2);
+        light.position.set(0, 50, 40);
+        light.target.position.set(0, 0, 0);
+
+        light.castShadow = true;
+        light.shadow.bias = 0.01;
+        light.shadow.mapSize.width = 512 * 3;
+        light.shadow.mapSize.heigth = 512 * 3;
+
+        light.shadow.camera.top = 25;
+        light.shadow.camera.right = 25;
+        light.shadow.camera.left = -25;
+        light.shadow.camera.bottom = -25;
+        light.shadow.camera.visible = true;
+
+        var directionalHelper = new THREE.CameraHelper(light.shadow.camera);
+        //scene.add(directionalHelper);
+        scene.add(light);
+
+        //personaje y 
+        //pasto
+        var geometry1 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
+        var material1 = new THREE.MeshLambertMaterial({ color: 0x2E801F, side:THREE.DoubleSide});
+        var mesh1 = new THREE.Mesh(geometry1, material1);
+        mesh1.position.set(-125, 0, 0);
+        mesh1.rotation.set(0, 0, 0);
+        scene.add(mesh1);
