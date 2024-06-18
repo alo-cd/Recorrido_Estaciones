@@ -181,6 +181,10 @@
       scene.add(pino5);
       pino5.position.set(-165,1,20);
 
+      var pino6 = pino1.clone();
+      scene.add(pino6);
+      pino6.position.set(2,1,45);
+
 
       //flores
         var geometry8 = new RoundedBoxGeometry(5,15,5,10,0.5);
@@ -276,6 +280,7 @@
       scene.add(arb1);
       arb1.position.set(-160,1,10);
       arb1.scale.set(0.75,0.75,0.75);
+
 
 
 
@@ -566,6 +571,27 @@ var mesh43= new THREE.Mesh(geometry43,material43);
 mesh43.position.set(-120,5,35);
 mesh43.rotation.set(0,0,0);
 scene.add(mesh43);
+
+//columpio 
+        var geometry44 = new THREE.BoxGeometry(10, 2, 25,10,10,10);
+        var material44 = new THREE.MeshLambertMaterial({ color: 0x833524, side:THREE.DoubleSide});
+        var mesh44 = new THREE.Mesh(geometry44, material44);
+        mesh44.position.set(-10,7, 53);
+        scene.add(mesh44);
+
+        var geometry45 = new THREE.BoxGeometry(25, 2, 5,5,5,5);
+        var material45 = new THREE.MeshLambertMaterial({ color: 0xBD6C5A, side:THREE.DoubleSide});
+        var mesh45 = new THREE.Mesh(geometry45, material45);
+        mesh45.position.set(-10,20, 40);
+        mesh45.rotation.set(0, 90, 5.495);
+        scene.add(mesh45);
+
+        var geometry46 = new THREE.BoxGeometry(25, 2, 5,5,5,5);
+        var material46 = new THREE.MeshLambertMaterial({ color: 0xBD6C5A, side:THREE.DoubleSide});
+        var mesh46 = new THREE.Mesh(geometry46, material46);
+        mesh46.position.set(-7,1, 35);
+        mesh46.rotation.set(0, 1.57, 0.995);
+        scene.add(mesh46);
 
 
       
