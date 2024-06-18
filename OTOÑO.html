@@ -112,10 +112,158 @@
         scene.add(light);
 
         //personaje y 
-        //pasto
+        //piso
         var geometry1 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
-        var material1 = new THREE.MeshLambertMaterial({ color: 0x2E801F, side:THREE.DoubleSide});
+        var material1 = new THREE.MeshLambertMaterial({ color: 0x9F5502, side:THREE.DoubleSide});
         var mesh1 = new THREE.Mesh(geometry1, material1);
         mesh1.position.set(-125, 0, 0);
         mesh1.rotation.set(0, 0, 0);
         scene.add(mesh1);
+
+        //pinos
+        var geometry4= new THREE.CylinderGeometry(5,5,30,10,10,false,3.5);
+        var material4 = new THREE.MeshLambertMaterial({ color: 0x6F522C, side:THREE.DoubleSide});
+        var mesh4 = new THREE.Mesh(geometry4, material4);
+        mesh4.position.set(-8, 15, 30);
+        mesh4.rotation.set(0, 0, 0);
+        //scene.add(mesh4);
+
+        var geometry5= new THREE.ConeGeometry(12,15,20,10);
+        var material5 = new THREE.MeshLambertMaterial({ color: 0xDD7500, side:THREE.DoubleSide});
+        var mesh5 = new THREE.Mesh(geometry5, material5);
+        mesh5.position.set(-8, 50, 30);
+        mesh5.rotation.set(0, 0, 0);
+        //scene.add(mesh5);
+
+        var geometry6= new THREE.ConeGeometry(12,15,20,10);
+        var material6 = new THREE.MeshLambertMaterial({ color: 0xDD7500, side:THREE.DoubleSide});
+        var mesh6 = new THREE.Mesh(geometry6, material6);
+        mesh6.position.set(-8, 43, 30);
+        mesh6.rotation.set(0, 0, 0);
+        //scene.add(mesh6);
+
+        var geometry7= new THREE.ConeGeometry(12,15,20,10);
+        var material7 = new THREE.MeshLambertMaterial({ color: 0xDD7500, side:THREE.DoubleSide});
+        var mesh7 = new THREE.Mesh(geometry6, material6);
+        mesh7.position.set(-8, 38, 30);
+        mesh7.rotation.set(0, 0, 0);
+        //scene.add(mesh7);
+
+        var pino1 = new THREE.Group();
+      pino1.add(mesh4, mesh5, mesh6, mesh7);
+      scene.add(pino1);
+
+      var pino4 = pino1.clone();
+      scene.add(pino4);
+      pino4.position.set(-230,1,-10);
+
+      var pino5 = pino1.clone();
+      scene.add(pino5);
+      pino5.position.set(-165,1,20);
+
+      var pino6 = pino1.clone();
+      scene.add(pino6);
+      pino6.position.set(-30,1,45);
+
+      //arboles
+      var geometry8 = new THREE.TetrahedronGeometry(25, 4);
+        var material8 = new THREE.MeshLambertMaterial({ color: 0x9F5502, side:THREE.DoubleSide});
+        var mesh8 = new THREE.Mesh(geometry8, material8);
+        mesh8.position.set(-50, 60, -60);
+        //scene.add(mesh8);
+
+        var geometry9= new THREE.CylinderGeometry(5,5,50,10,10,false,3.5);
+        var material9 = new THREE.MeshLambertMaterial({ color: 0x6F522C, side:THREE.DoubleSide});
+        var mesh9 = new THREE.Mesh(geometry9, material9);
+        mesh9.position.set(-50, 25, -60);
+        mesh9.rotation.set(0, 0, 0);
+        //scene.add(mesh9);
+
+        var arbol = new THREE.Group();
+      arbol.add(mesh8, mesh9);
+      scene.add(arbol1);
+
+      var arbol1 = arbol.clone();
+      scene.add(arbol1);
+      arbol1.position.set(-60,0,-20);
+
+      var arbol2 = arbol.clone();
+      scene.add(arbol2);
+      arbol2.position.set(-180,0,-20);
+
+      //banca
+        var geometry10 = new THREE.BoxGeometry(70, 3, 20, 20, 20,20);
+        var material10 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh10 = new THREE.Mesh(geometry10, material10);
+        mesh10.position.set(-180, 12, -65);
+        scene.add(mesh10);
+
+        var geometry11 = new THREE.BoxGeometry(5, 20, 20, 20, 20,20);
+        var material11 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh11 = new THREE.Mesh(geometry11, material11);
+        mesh11.position.set(-205, 22, -65);
+        scene.add(mesh11);
+
+        var geometry12 = new THREE.BoxGeometry(5, 20, 20, 20, 20,20);
+        var material12 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh12 = new THREE.Mesh(geometry12, material12);
+        mesh12.position.set(-155, 22, -65);
+        scene.add(mesh12);
+
+        var geometry13 = new THREE.BoxGeometry(55, 3, 5, 20, 20,20);
+        var material13 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh13 = new THREE.Mesh(geometry13, material13);
+        mesh13.position.set(-180, 28, -70);
+        scene.add(mesh13);
+
+        var geometry14 = new THREE.BoxGeometry(55, 3, 5, 20, 20,20);
+        var material14 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh14 = new THREE.Mesh(geometry14, material14);
+        mesh14.position.set(-180, 20, -70);
+        scene.add(mesh14);
+
+        var geometry15 = new THREE.BoxGeometry(5, 12, 5, 20, 20,20);
+        var material15 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh15 = new THREE.Mesh(geometry15, material15);
+        mesh15.position.set(-210, 6, -70);
+        scene.add(mesh15);
+
+        var geometry16 = new THREE.BoxGeometry(5, 12, 5, 20, 20,20);
+        var material16 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh16 = new THREE.Mesh(geometry16, material16);
+        mesh16.position.set(-150, 6, -70);
+        scene.add(mesh16);
+
+        var geometry17 = new THREE.BoxGeometry(5, 12, 5, 20, 20,20);
+        var material17 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh17 = new THREE.Mesh(geometry17, material17);
+        mesh17.position.set(-150, 6, -59);
+        scene.add(mesh17);
+
+        var geometry18 = new THREE.BoxGeometry(5, 12, 5, 20, 20,20);
+        var material18 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh18 = new THREE.Mesh(geometry18, material18);
+        mesh18.position.set(-210, 6, -59);
+        scene.add(mesh18);
+
+
+       
+
+
+        //🎰🎰Rendering y animación
+        requestAnimationFrame(render);
+        function render() {
+
+
+            //🪄🪄 Animación -
+
+            //🎮🎮Actualización del OrbitControls para generar la suavidad de movimiento
+            controls.update();
+
+            //Llamado para renderizar y volver a llamar a la misma función (render)
+            renderer.render(scene, camera);
+            requestAnimationFrame(render);
+        }
+    </script>
+</body>
+</html>
