@@ -246,6 +246,123 @@
         mesh18.position.set(-210, 6, -59);
         scene.add(mesh18);
 
+        //hojas 
+        var geometry22 = new RoundedBoxGeometry(3,10,3,10,0.5);
+        var material22 = new THREE.MeshLambertMaterial({ color: 0xFF8700, side:THREE.DoubleSide});
+        var mesh22 = new THREE.Mesh(geometry22, material22);
+        mesh22.position.set(-35, 2, 80);
+        mesh22.rotation.set(0, 0, 0);
+        scene.add(mesh22);
+
+        var geometry23 = new RoundedBoxGeometry(3,10,3,10,0.5);
+        var material23 = new THREE.MeshLambertMaterial({ color: 0xFF8700, side:THREE.DoubleSide});
+        var mesh23 = new THREE.Mesh(geometry23, material23);
+        mesh23.position.set(-35, 2, 80);
+        mesh23.rotation.set(0, 0, 0.785);
+        //scene.add(mesh23);
+
+        var geometry24 = new RoundedBoxGeometry(3,10,3,10,0.5);
+        var material24 = new THREE.MeshLambertMaterial({ color: 0xFF8700, side:THREE.DoubleSide});
+        var mesh24 = new THREE.Mesh(geometry24, material24);
+        mesh24.position.set(-35, 2, 80);
+        mesh24.rotation.set(0, 0, 1.57);
+        //scene.add(mesh24);
+
+        var geometry25 = new RoundedBoxGeometry(3,10,3,10,0.5);
+        var material25 = new THREE.MeshLambertMaterial({ color: 0xFF8700, side:THREE.DoubleSide});
+        var mesh25 = new THREE.Mesh(geometry25, material25);
+        mesh25.position.set(-35, 2, 80);
+        mesh25.rotation.set(0, 0, 2.355);
+        //scene.add(mesh25);
+
+        var florm = new THREE.Group();
+      florm.add(mesh22, mesh23, mesh24, mesh25);
+      scene.add(florm);
+
+      var florm1 = florm.clone();
+      scene.add(florm1);
+      florm1.position.set(-1,1,23);
+      florm1.scale.set(0.75,0.75,0.75);
+
+      var hoja1 = florm.clone();
+      scene.add(hoja1);
+      hoja1.position.set(-15,1,23);
+      hoja1.scale.set(0.80,0.75,0.75);
+
+      var hoja2 = florm.clone();
+      scene.add(hoja2);
+      hoja2.position.set(7,1,-25);
+      hoja2.scale.set(0.75,0.75,0.75);
+
+      var hoja3 = florm.clone();
+      scene.add(hoja3);
+      hoja3.position.set(-25,1,-25);
+
+      var hoja4 = florm.clone();
+      scene.add(hoja4);
+      hoja4.position.set(15,0.5,-30);
+      hoja4.scale.set(0.85,0.85,0.85);
+
+      var hoja5 = florm.clone();
+      scene.add(hoja5);
+      hoja5.position.set(5,0.5,-30);
+      hoja5.scale.set(0.85,0.85,0.85);
+
+      var hoja6 = florm.clone();
+      scene.add(hoja6);
+      hoja6.position.set(-50,0.5,-30);
+      hoja6.scale.set(0.85,0.85,0.85);
+
+      var hoja7 = florm.clone();
+      scene.add(hoja7);
+      hoja7.position.set(-100,0.5,-30);
+      hoja7.scale.set(0.85,0.85,0.85);
+    
+      var hoja8 = florm.clone();
+      scene.add(hoja8);
+      hoja8.position.set(-100,0.5,-25);
+      hoja8.scale.set(0.50,0.50,0.50);
+
+      var hoja9 = florm.clone();
+      scene.add(hoja9);
+      hoja9.position.set(-200,0.5,-30);
+      hoja9.scale.set(0.85,0.85,0.85);
+
+      var hoja10 = florm.clone();
+      scene.add(hoja10);
+      hoja10.position.set(-205,0.5,-25);
+      hoja10.scale.set(0.85,0.85,0.85);
+
+      var hoja11 = florm.clone();
+      scene.add(hoja11);
+      hoja11.position.set(-200,0.5,-50);
+      hoja11.scale.set(0.85,0.85,0.85);
+
+      var hoja12 = florm.clone();
+      scene.add(hoja12);
+      hoja12.position.set(-170,0.5,-10);
+      hoja12.scale.set(0.85,0.85,0.85);
+
+      //arbustos 
+        var geometry19 = new THREE.TorusKnotGeometry(8, 5, 45,5, 10,2);
+        var material19 = new THREE.MeshLambertMaterial({ color: 0xDE8C30, side: THREE.DoubleSide });
+        var mesh19 = new THREE.Mesh(geometry19, material19);
+        mesh19.position.set(-235, 2, -70);
+        mesh19.rotation.set(0, 3.14, 0);
+        mesh19.scale.set(0.75,0.75,0.75);
+        scene.add(mesh19); 
+
+        var geometry20 = new THREE.TorusKnotGeometry(8, 5, 45,5, 10,2);
+        var material20 = new THREE.MeshLambertMaterial({ color: 0xDE8C30, side: THREE.DoubleSide });
+        var mesh20 = new THREE.Mesh(geometry20, material20);
+        mesh20.position.set(-225, 2, -65);
+        mesh20.rotation.set(0, 3.14, 0);
+        mesh20.scale.set(0.55,0.55,0.55);
+        scene.add(mesh20); 
+    
+
+      
+
 
        
 
