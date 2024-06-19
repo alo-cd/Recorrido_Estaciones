@@ -430,8 +430,51 @@
         mesh30.rotation.set(0, 0, 0);
         scene.add(mesh30);
 
+        var geometry33 = new THREE.BoxGeometry(20, 25, 10, 20, 20,20);
+        var material33 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh33 = new THREE.Mesh(geometry33, material33);
+        mesh33.position.set(-50, 5, -50);
+        scene.add(mesh33);
+
         //cruz
-        
+        var geometry31 = new THREE.BoxGeometry(5, 20, 3, 20, 20,20);
+        var material31 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh31 = new THREE.Mesh(geometry31, material31);
+        mesh31.position.set(-50, 50, -65);
+        scene.add(mesh31);
+
+        var geometry32 = new THREE.BoxGeometry(15, 3, 3, 20, 20,20);
+        var material32 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh32 = new THREE.Mesh(geometry32, material32);
+        mesh32.position.set(-50, 53, -65);
+        scene.add(mesh32);
+
+        //calabazas 
+        var geometry33 = new THREE.TetrahedronGeometry(10, 2);
+        var material33 = new THREE.MeshLambertMaterial({ color: 0xE27139, side:THREE.DoubleSide});
+        var mesh33 = new THREE.Mesh(geometry33, material33);
+        mesh33.position.set(-200, 9, -10);
+        scene.add(mesh33);
+
+        var geometry34= new THREE.ConeGeometry(8,20,5,5);
+        var material34 = new THREE.MeshLambertMaterial({ color: 0x097E0E, side:THREE.DoubleSide});
+        var mesh34 = new THREE.Mesh(geometry34, material34);
+        mesh34.position.set(-200, 15, -10);
+        mesh34.rotation.set(0, 0, 0);
+        mesh34.scale.set(0.85,0.85,0.85);
+        scene.add(mesh34);
+
+        //ojos
+        var geometry35= new THREE.ConeGeometry(7,15,10,10);
+        var material35 = new THREE.MeshLambertMaterial({ color: 0x000000, side:THREE.DoubleSide});
+        var mesh35 = new THREE.Mesh(geometry35, material35);
+        mesh35.position.set(-200, 50, -10);
+        mesh35.rotation.set(0, 0, 0);
+        mesh35.scale.set(0.85,0.85,0.85);
+        scene.add(mesh35);
+
+
+
 
         
 
