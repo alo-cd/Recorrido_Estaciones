@@ -359,6 +359,85 @@
         mesh20.rotation.set(0, 3.14, 0);
         mesh20.scale.set(0.55,0.55,0.55);
         scene.add(mesh20); 
+
+        var geometry21 = new THREE.TorusKnotGeometry(8, 5, 45,5, 10,2);
+        var material21 = new THREE.MeshLambertMaterial({ color: 0xDE8C30, side: THREE.DoubleSide });
+        var mesh21 = new THREE.Mesh(geometry21, material21);
+        mesh21.position.set(-115, 2, -70);
+        mesh21.rotation.set(0, 3.14, 0);
+        mesh21.scale.set(0.75,0.75,0.75);
+        scene.add(mesh21); 
+
+        var geometry22 = new THREE.TorusKnotGeometry(8, 5, 45,5, 10,2);
+        var material22 = new THREE.MeshLambertMaterial({ color: 0xDE8C30, side: THREE.DoubleSide });
+        var mesh22 = new THREE.Mesh(geometry22, material22);
+        mesh22.position.set(-105, 2, -65);
+        mesh22.rotation.set(0, 3.14, 0);
+        mesh22.scale.set(0.55,0.55,0.55);
+        scene.add(mesh22); 
+
+        //lampara 
+        var geometry23= new THREE.CylinderGeometry(3,3,37,10,10,false,3.5);
+        var material23 = new THREE.MeshLambertMaterial({ color: 0x000000, side:THREE.DoubleSide});
+        var mesh23 = new THREE.Mesh(geometry23, material23);
+        mesh23.position.set(-132, 18, -60);
+        mesh23.rotation.set(0, 0, 0);
+        scene.add(mesh23);
+
+        var geometry24 = new THREE.BoxGeometry(10, 3, 12, 20, 20,20);
+        var material24 = new THREE.MeshLambertMaterial({ color: 0x000000, side:THREE.DoubleSide});
+        var mesh24 = new THREE.Mesh(geometry24, material24);
+        mesh24.position.set(-132, 1, -60);
+        scene.add(mesh24);
+
+        var geometry25 = new THREE.TetrahedronGeometry(12, 2);
+        var material25 = new THREE.MeshLambertMaterial({ color: 0xFFEA60, side:THREE.DoubleSide});
+        var mesh25 = new THREE.Mesh(geometry25, material25);
+        mesh25.position.set(-132, 40, -60);
+        scene.add(mesh25);
+
+        var geometry26 = new THREE.BoxGeometry(18, 3, 12, 20, 20,20);
+        var material26 = new THREE.MeshLambertMaterial({ color: 0x000000, side:THREE.DoubleSide});
+        var mesh26 = new THREE.Mesh(geometry26, material26);
+        mesh26.position.set(-132, 30, -60);
+        scene.add(mesh26);
+
+        //casa
+        var geometry27 = new THREE.BoxGeometry(45, 30, 28, 20, 20,20);
+        var material27 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh27 = new THREE.Mesh(geometry27, material27);
+        mesh27.position.set(-50, 15, -65);
+        scene.add(mesh27);
+
+        var geometry28= new THREE.ConeGeometry(15,18,40,20);
+        var material28 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh28 = new THREE.Mesh(geometry28, material28);
+        mesh28.position.set(-60, 40, -65);
+        mesh28.rotation.set(0, 0, 0);
+        scene.add(mesh28);
+
+        var geometry29= new THREE.ConeGeometry(25,15,35,20);
+        var material29 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh29 = new THREE.Mesh(geometry29, material29);
+        mesh29.position.set(-50, 37.5, -65);
+        mesh29.rotation.set(0, 0, 0);
+        scene.add(mesh29);
+
+        var geometry30= new THREE.ConeGeometry(15,18,40,20);
+        var material30 = new THREE.MeshLambertMaterial({ color: 0x473C1A, side:THREE.DoubleSide});
+        var mesh30 = new THREE.Mesh(geometry30, material30);
+        mesh30.position.set(-40, 40, -65);
+        mesh30.rotation.set(0, 0, 0);
+        scene.add(mesh30);
+
+        //cruz
+        
+
+        
+
+
+      
+      
     
 
       
