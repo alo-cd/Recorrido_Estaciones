@@ -142,7 +142,7 @@ export default function INV04({x,y,z}){
     var mesh116 = new THREE.Mesh(geometry116, material116);
     mesh116.position.set(160, 23, -10);
     mesh116.rotation.set(0, 0, 45);
-//scene.add(mesh116);
+    //scene.add(mesh116);
 
     var geometry117 = new THREE.SphereGeometry(2, 50, 50);
     var material117 = new THREE.MeshLambertMaterial({ color: 0xB7F5CD });
@@ -293,7 +293,7 @@ export default function INV04({x,y,z}){
     //arbol agrupado
     var arbol1 = new THREE.Group();
     arbol1.add(mesh22, mesh23, mesh24, mesh25, mesh26, mesh27, mesh28, mesh29, mesh30);
-    //scene.add(arbol1);
+    scene.add(arbol1);
 
     //arbol clonado
     var arbol2 = arbol1.clone();
@@ -395,7 +395,7 @@ export default function INV04({x,y,z}){
     flor4.rotation.set(0, 0, 0);
 
     var flor5 = flor1.clone();
-    scene.add(flor5);
+    //scene.add(flor5);
     flor5.position.set(225, 72, 70.5);
     flor5.scale.set(0.75, 0.75, 0.75);
     flor5.rotation.set(0, 0, 0);
@@ -493,12 +493,12 @@ export default function INV04({x,y,z}){
     lampara7.rotation.set(0, 0, 0);
 
     var lampara8 = lampara1.clone();
-    //scene.add(lampara8);
+    scene.add(lampara8);
     lampara8.position.set(0, 0, 25);
     lampara8.scale.set(0.99, 0.99, 0.9);
     lampara8.rotation.set(0, 0, 0);
 
-    //mu�eco de nieve
+    //muñeco de nieve
     var geometry42 = new THREE.SphereGeometry(5, 50, 50);
     var material42 = new THREE.MeshLambertMaterial({ color: 0xF6F6F6 });
     var mesh42 = new THREE.Mesh(geometry42, material42);
@@ -747,7 +747,7 @@ export default function INV04({x,y,z}){
     //scene.add(vagon1);
 
     var vagon2 = vagon1.clone();
-    scene.add(vagon2);
+    //scene.add(vagon2);
     vagon2.position.set(0, 0, -50);
     vagon2.scale.set(1, 1, 1);
     vagon2.rotation.set(0, 0, 0);
@@ -888,14 +888,14 @@ export default function INV04({x,y,z}){
     var mesh90 = new THREE.Mesh(geometry90, material90);
     mesh90.position.set(39, 0, 0);
     mesh90.rotation.set(1.57, 0, 0);
-    scene.add(mesh90);
+    //scene.add(mesh90);
 
     var geometry91 = new THREE.CylinderGeometry(1, 1, 200, 50, 50);
     var material91 = new THREE.MeshLambertMaterial({ color: 0x898989, side: THREE.DoubleSide });
     var mesh91 = new THREE.Mesh(geometry91, material91);
     mesh91.position.set(60, 0, 0);
     mesh91.rotation.set(1.57, 0, 0);
-    scene.add(mesh91);
+    //scene.add(mesh91);
 
     //estacion del tren
     var geometry92 = new RoundedBoxGeometry(30, 5, 100, 10, 1.5);
@@ -904,7 +904,7 @@ export default function INV04({x,y,z}){
     var mesh92 = new THREE.Mesh(geometry92, material92);
     mesh92.position.set(10, 45, 0);
     mesh92.rotation.set(0, 0, 0);
-    scene.add(mesh92);
+    //scene.add(mesh92);
     texture5.wrapS = THREE.RepeatWrapping;
     texture5.wrapT = THREE.RepeatWrapping;
     texture5.repeat.set(2, 2);
@@ -920,7 +920,7 @@ export default function INV04({x,y,z}){
     var mesh93 = new THREE.Mesh(geometry93, material93);
     mesh93.position.set(15, 5, 0);
     mesh93.rotation.set(0, 0, 0);
-    scene.add(mesh93);
+    //scene.add(mesh93);
     texture5.wrapS = THREE.RepeatWrapping;
     texture5.wrapT = THREE.RepeatWrapping;
     texture5.repeat.set(2, 2);
@@ -933,28 +933,28 @@ export default function INV04({x,y,z}){
     var mesh92 = new THREE.Mesh(geometry92, material92);
     mesh92.position.set(8, 25, -40);
     mesh92.rotation.set(0, 0, 0);
-    scene.add(mesh92);
+    //scene.add(mesh92);
 
     var geometry93 = new THREE.CylinderGeometry(2, 2, 40, 50, 50);
     var material93 = new THREE.MeshLambertMaterial({ color: 0x898989, side: THREE.DoubleSide });
     var mesh93 = new THREE.Mesh(geometry93, material93);
     mesh93.position.set(8, 25, 40);
     mesh93.rotation.set(0, 0, 0);
-    scene.add(mesh93);
+    //scene.add(mesh93);
 
     var geometry94 = new THREE.CylinderGeometry(1.5, 1.5, 40, 50, 50);
     var material94 = new THREE.MeshLambertMaterial({ color: 0x898989, side: THREE.DoubleSide });
     var mesh94 = new THREE.Mesh(geometry94, material94);
     mesh94.position.set(22, 25, 40);
     mesh94.rotation.set(0, 0, 0);
-    scene.add(mesh94);
+    //scene.add(mesh94);
 
     var geometry95 = new THREE.CylinderGeometry(1.5, 1.5, 40, 50, 50);
     var material95 = new THREE.MeshLambertMaterial({ color: 0x898989, side: THREE.DoubleSide });
     var mesh95 = new THREE.Mesh(geometry95, material95);
     mesh95.position.set(22, 25, -40);
     mesh95.rotation.set(0, 0, 0);
-    scene.add(mesh95);
+    //scene.add(mesh95);
 
     //nieve estacion
     var geometry96 = new RoundedBoxGeometry(30, 2, 100, 10, 1.5);
@@ -962,16 +962,16 @@ export default function INV04({x,y,z}){
     var mesh96 = new THREE.Mesh(geometry96, material96);
     mesh96.position.set(10, 48, 0);
     mesh96.rotation.set(0, 0, 0);
-    scene.add(mesh96);
+    //scene.add(mesh96);
 
-    //monta�as
+    //montañas
     var geometry97 = new THREE.ConeGeometry(55, 90, 50, 50);
     var texture9 = new THREE.TextureLoader().load("./assets/nieve1.jpg");
     var material97 = new THREE.MeshLambertMaterial({ map: texture9 });
     var mesh97 = new THREE.Mesh(geometry97, material97);
     mesh97.position.set(150, 40, -85);
     mesh97.rotation.set(0, 0, 0);
-    scene.add(mesh97);
+    //scene.add(mesh97);
     texture9.wrapS = THREE.RepeatWrapping;
     texture9.wrapT = THREE.RepeatWrapping;
     texture9.repeat.set(1, 1);
@@ -986,7 +986,7 @@ export default function INV04({x,y,z}){
     var mesh98 = new THREE.Mesh(geometry98, material98);
     mesh98.position.set(200, 35, -85);
     mesh98.rotation.set(0, 0, 0);
-    scene.add(mesh98);
+    //scene.add(mesh98);
     texture9.wrapS = THREE.RepeatWrapping;
     texture9.wrapT = THREE.RepeatWrapping;
     texture9.repeat.set(1, 1);
@@ -1001,7 +1001,7 @@ export default function INV04({x,y,z}){
     var mesh99 = new THREE.Mesh(geometry99, material99);
     mesh99.position.set(210, 6, 80);
     mesh99.rotation.set(0, 0, 0);
-    scene.add(mesh99);
+    //scene.add(mesh99);
     texture1.wrapS = THREE.RepeatWrapping;
     texture1.wrapT = THREE.RepeatWrapping;
     texture1.repeat.set(1, 1);
@@ -1015,7 +1015,7 @@ export default function INV04({x,y,z}){
     var mesh100 = new THREE.Mesh(geometry100, material100);
     mesh100.position.set(225, 6, 85);
     mesh100.rotation.set(0, 0, 0);
-    scene.add(mesh100);
+    //scene.add(mesh100);
     texture2.wrapS = THREE.RepeatWrapping;
     texture2.wrapT = THREE.RepeatWrapping;
     texture2.repeat.set(1, 1);
@@ -1029,7 +1029,7 @@ export default function INV04({x,y,z}){
     var mesh101 = new THREE.Mesh(geometry101, material101);
     mesh101.position.set(240, 6, 80);
     mesh101.rotation.set(0, 0, 0);
-    scene.add(mesh101);
+    //scene.add(mesh101);
     texture3.wrapS = THREE.RepeatWrapping;
     texture3.wrapT = THREE.RepeatWrapping;
     texture3.repeat.set(1, 1);
@@ -1043,7 +1043,7 @@ export default function INV04({x,y,z}){
     var mesh102 = new THREE.Mesh(geometry102, material102);
     mesh102.position.set(208, 6, 65);
     mesh102.rotation.set(0, 0, 0);
-    scene.add(mesh102);
+    //scene.add(mesh102);
     texture4.wrapS = THREE.RepeatWrapping;
     texture4.wrapT = THREE.RepeatWrapping;
     texture4.repeat.set(1, 1);
@@ -1057,60 +1057,60 @@ export default function INV04({x,y,z}){
     var mesh110 = new THREE.Mesh(geometry110, material110);
     mesh110.position.set(150, 60, 70);
     mesh110.rotation.set(0, 0, 0);
-    scene.add(mesh110);
+    //scene.add(mesh110);
 
     var geometry111 = new THREE.SphereGeometry(2.5, 50, 50);
     var material111 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh111 = new THREE.Mesh(geometry111, material111);
     mesh111.position.set(200, 32, 62);
     mesh111.rotation.set(0, 0, 0);
-    scene.add(mesh111);
+    //scene.add(mesh111);
 
     var geometry112 = new THREE.SphereGeometry(2, 50, 50);
     var material112 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh112 = new THREE.Mesh(geometry112, material112);
     mesh112.position.set(50, 76, -55);
     mesh112.rotation.set(0, 0, 0);
-    scene.add(mesh112);
+    //scene.add(mesh112);
 
     var geometry113 = new THREE.SphereGeometry(3, 50, 50);
     var material113 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh113 = new THREE.Mesh(geometry113, material113);
     mesh113.position.set(110, 58, 42);
     mesh113.rotation.set(0, 0, 0);
-    scene.add(mesh113);
+    //scene.add(mesh113);
 
     var geometry114 = new THREE.SphereGeometry(1, 50, 50);
     var material114 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh114 = new THREE.Mesh(geometry114, material114);
     mesh114.position.set(180, 50, -10);
     mesh114.rotation.set(0, 0, 0);
-    scene.add(mesh114);
+    //scene.add(mesh114);
 
     var geometry115 = new THREE.SphereGeometry(2.5, 50, 50);
     var material115 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh115 = new THREE.Mesh(geometry115, material115);
     mesh115.position.set(200, 42, 22);
     mesh115.rotation.set(0, 0, 0);
-    scene.add(mesh115);
+    //scene.add(mesh115);
 
     var geometry116 = new THREE.SphereGeometry(2, 50, 50);
     var material116 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh116 = new THREE.Mesh(geometry116, material116);
     mesh116.position.set(200, 56, 55);
     mesh116.rotation.set(0, 0, 0);
-    scene.add(mesh116);
+    //scene.add(mesh116);
 
     var geometry113 = new THREE.SphereGeometry(3, 50, 50);
     var material113 = new THREE.MeshLambertMaterial({ color: 0xF4F4F4 });
     var mesh113 = new THREE.Mesh(geometry113, material113);
     mesh113.position.set(190, 78, 30);
     mesh113.rotation.set(0, 0, 0);
-    scene.add(mesh113);
+    //scene.add(mesh113);
 
 const I04 = new THREE.Group();
 I04.add(
-mesh1,
+    mesh1,
 mesh2,
 mesh103,
 mesh3,
@@ -1197,7 +1197,8 @@ mesh113,
 mesh114,
 mesh115,
 mesh116,
-mesh113);
+mesh113
+);
 I04.position.set(x,y,z);
     return I04;
 }
