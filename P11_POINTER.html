@@ -10,7 +10,7 @@
      <title>POINTERLOCK</title>
      <!--Contiene el título-->
      <style>
-        /*Da estilo al documento*/
+        /Da estilo al documento/
           body {
               margin: 0;
               overflow: hidden;
@@ -66,6 +66,11 @@
         import { TWEEN } from './js/tween.module.min.js'; // Libreria movimiento suave
         import { PointerLockControls } from 'three/PointerLockControls'; //control de camara
     
+
+        import V01 from "./js/VERANO01.js"
+        import P02 from "./js/PRIMAVERA02.js"
+        import O03 from "./js/OTOÑO03.js"
+        import I04 from "./js/INVIERNO04.js"
 
 
 //🕹️🕹️ Renderer - Realiza una conexión entre el código y el canvas
@@ -210,57 +215,38 @@ scene.add(mesh);
 mesh.receiveShadow = true;
 
 
-/// MESH 1 ESFERA ROJA
-var geometry1 = new THREE.SphereGeometry(6);
-var material1 = new THREE.MeshLambertMaterial({color:0xff0000});
-var mesh1 = new THREE.Mesh(geometry1,material1);
-mesh1.position.set(-50,6,-50,);
-scene.add(mesh1);
-mesh1.castShadow = true;
+        const EV1 = V01({ x: -10, y: 0, z: -10 });
+        scene.add(EV1);
 
-/// MESH 2 ESFERA AMARILLA
-var geometry2 = new THREE.SphereGeometry(6);
-var material2 = new THREE.MeshLambertMaterial({color:0xffFF00});
-var mesh2 = new THREE.Mesh(geometry2,material2);
-mesh2.position.set(50,6,-50,);
-scene.add(mesh2);
-mesh2.castShadow = true;
+        const EP2 = P02({ x: -10, y: 0, z: -10 });
+        scene.add(EP2);
 
-/// MESH 3 ESFERA AZUL
-var geometry3 = new THREE.SphereGeometry(6);
-var material3 = new THREE.MeshLambertMaterial({color:0x0000FF});
-var mesh3 = new THREE.Mesh(geometry3,material3);
-mesh3.position.set(50,6,50,);
-scene.add(mesh3);
-mesh3.castShadow = true;
+        const EO3 = O03({ x: -10, y: 0, z: -210 });
+        scene.add(EO3);
 
-/// MESH 4 ESFERA MAGENTA
-var geometry4 = new THREE.SphereGeometry(6);
-var material4 = new THREE.MeshLambertMaterial({color:0xFF00FF});
-var mesh4 = new THREE.Mesh(geometry4,material4);
-mesh4.position.set(-50,6,50,);
-scene.add(mesh4);
-mesh4.castShadow = true;
+        const EI4 = I04({ x: -10, y: 0, z: -210 });
+        scene.add(EI4); 
+
 
     // inician las interacciones ################################################################################################################
         //Se añade el "evento" mouse arriba, mouse se retira, click
 
         ///MESH 1 ESFERA ROJA
         
-        mesh1.addEventListener('mouseover', (event) => {  //Evento para cuando colocamos el cursor sobre la figura
+        EV1.addEventListener('mouseover', (event) => {  //Evento para cuando colocamos el cursor sobre la figura
           event.target.material.color.set(0xff0000); //se indica que pasara con el objetivo de la interacción, en este caso cambia de color
           document.body.style.cursor = 'pointer';
         });
-        mesh1.addEventListener('mouseout', (event) => {  //evento para cuando quitas el cursor de la figura, si no se agrega se le quedara el color que se puso en el mouseover
+        EV1.addEventListener('mouseout', (event) => {  //evento para cuando quitas el cursor de la figura, si no se agrega se le quedara el color que se puso en el mouseover
           event.target.material.color.set(0xff0000);
           document.body.style.cursor = 'default';
         });
-        mesh1.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
+        EV1.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
           event.target.material.color.set(0x512E5F);
           event.target.scale.set(1.1, 1.1, 1.1);//se indica que pasara con el objetivo de la interacción, en este caso cambia de tamaño
         });
 
-        mesh1.addEventListener('click', (event) => { //evento para cuando se suelta el clic
+        EV1.addEventListener('click', (event) => { //evento para cuando se suelta el clic
           var coords = { x: camera.position.x, y: camera.position.y, z: camera.position.z };// se crea un objeto para "contener" las coordenadas
           event.target.scale.set(1.0, 1.0, 1.0);
           new TWEEN.Tween(coords) //Se declara el TWEEN, que permite que los movimientos sean fluidos y no de golpe 
@@ -273,19 +259,19 @@ mesh4.castShadow = true;
 
        ///MESH 2 ESFERA MARILLA
 
-       mesh2.addEventListener('mouseover', (event) => {  
+       EP2.addEventListener('mouseover', (event) => {  
           event.target.material.color.set(0xffff00); 
           document.body.style.cursor = 'pointer';
         });
-        mesh2.addEventListener('mouseout', (event) => {  
+        EP2.addEventListener('mouseout', (event) => {  
           event.target.material.color.set(0xffff00);
           document.body.style.cursor = 'default';
         });
-        mesh2.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
+        EP2.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
           event.target.material.color.set(0x512E5F);
           event.target.scale.set(1.1, 1.1, 1.1);//se indica que pasara con el objetivo de la interacción, en este caso cambia de tamaño
         });
-       mesh2.addEventListener('click', (event) => {
+       EP2.addEventListener('click', (event) => {
           var coords = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
           event.target.scale.set(1.0, 1.0, 1.0);
           new TWEEN.Tween(coords)
@@ -296,19 +282,19 @@ mesh4.castShadow = true;
         });
 
         ///MESH 3 ESFERA AZUL
-        mesh3.addEventListener('mouseover', (event) => {  
+        EO3.addEventListener('mouseover', (event) => {  
           event.target.material.color.set(0x0000ff); 
           document.body.style.cursor = 'pointer';
         });
-        mesh3.addEventListener('mouseout', (event) => {  
+        EO3.addEventListener('mouseout', (event) => {  
           event.target.material.color.set(0x0000ff);
           document.body.style.cursor = 'default';
         });
-        mesh3.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
+        EO3.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
           event.target.material.color.set(0x512E5F);
           event.target.scale.set(1.1, 1.1, 1.1);//se indica que pasara con el objetivo de la interacción, en este caso cambia de tamaño
         });
-        mesh3.addEventListener('click', (event) => {
+        EO3.addEventListener('click', (event) => {
           var coords = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
           event.target.scale.set(1.0, 1.0, 1.0);
           new TWEEN.Tween(coords)
@@ -320,19 +306,19 @@ mesh4.castShadow = true;
   
    
         ///MESH 4 ESFERA MAGENTA
-        mesh4.addEventListener('mouseover', (event) => {  
+        EI4.addEventListener('mouseover', (event) => {  
           event.target.material.color.set(0xff00ff); 
           document.body.style.cursor = 'pointer';
         });
-        mesh4.addEventListener('mouseout', (event) => {  
+        EI4.addEventListener('mouseout', (event) => {  
           event.target.material.color.set(0xff00ff);
           document.body.style.cursor = 'default';
         });
-        mesh4.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
+        EI4.addEventListener('mousedown', (event) => { //Evento para cuando el mouse esta presionado
           event.target.material.color.set(0x512E5F);
           event.target.scale.set(1.1, 1.1, 1.1);//se indica que pasara con el objetivo de la interacción, en este caso cambia de tamaño
         });
-        mesh4.addEventListener('click', (event) => {
+        EI4.addEventListener('click', (event) => {
           var coords = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
           event.target.scale.set(1.0, 1.0, 1.0);
           new TWEEN.Tween(coords)
@@ -346,10 +332,10 @@ mesh4.castShadow = true;
 //////// FIN INTERACCION
 
         /////////
-        interactionManager.add(mesh1); ////////////// Añadir el elemento que se quiere animar al interactionmanager, si no se respetan las interacciones
-        interactionManager.add(mesh2);
-        interactionManager.add(mesh3);
-        interactionManager.add(mesh4);
+        interactionManager.add(EV1); ////////////// Añadir el elemento que se quiere animar al interactionmanager, si no se respetan las interacciones
+        interactionManager.add(EP2);
+        interactionManager.add(EO3);
+        interactionManager.add(EI4);
 
 
 
