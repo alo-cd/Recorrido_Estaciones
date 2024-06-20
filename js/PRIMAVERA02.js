@@ -4,9 +4,9 @@ import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
 
-export default function PRIM02({x,y,z}){
+export default function PRIM02({x,y,z}){}
 
-   //personaje y 
+  //personaje y 
         //pasto
         var geometry1 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
         var texture1 = new THREE.TextureLoader().load("./assets/pasto.jpg");
