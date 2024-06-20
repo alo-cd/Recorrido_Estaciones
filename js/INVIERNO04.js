@@ -293,7 +293,7 @@ export default function INV04({x,y,z}){
     //arbol agrupado
     var arbol1 = new THREE.Group();
     arbol1.add(mesh22, mesh23, mesh24, mesh25, mesh26, mesh27, mesh28, mesh29, mesh30);
-    scene.add(arbol1);
+    //scene.add(arbol1);
 
     //arbol clonado
     var arbol2 = arbol1.clone();
@@ -493,7 +493,7 @@ export default function INV04({x,y,z}){
     lampara7.rotation.set(0, 0, 0);
 
     var lampara8 = lampara1.clone();
-    scene.add(lampara8);
+    //scene.add(lampara8);
     lampara8.position.set(0, 0, 25);
     lampara8.scale.set(0.99, 0.99, 0.9);
     lampara8.rotation.set(0, 0, 0);
@@ -1148,7 +1148,7 @@ flor4,
 flor5,
 lampara1,
 lampara2,
-lamapra3,
+lampara3,
 lampara4,
 lampara5,
 lampara6,
