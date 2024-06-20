@@ -3,8 +3,7 @@ import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";
 import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
-
-export default function PRIM02({x,y,z}){}
+export default function VER01({x,y,z}){
 
   //personaje y 
         //pasto
@@ -602,24 +601,6 @@ var meshtexto1 = new THREE.Mesh(texto1, materialtexto1);
 meshtexto1.position.set(-220, 25, 88);
 //scene.add(meshtexto1);
 meshtexto1.castShadow = true;
-
-
-      
-
-
-        //🎰🎰Rendering y animación
-        requestAnimationFrame(render);
-        function render() {
-
-
-            //🪄🪄 Animación -
-
-            //🎮🎮Actualización del OrbitControls para generar la suavidad de movimiento
-            controls.update();
-
-            //Llamado para renderizar y volver a llamar a la misma función (render)
-            renderer.render(scene, camera);
-            requestAnimationFrame(render);
 
 
 
