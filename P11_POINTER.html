@@ -10,7 +10,7 @@
      <title>POINTERLOCK</title>
      <!--Contiene el título-->
      <style>
-        /Da estilo al documento/
+        <!--Da estilo al documento-->
           body {
               margin: 0;
               overflow: hidden;
@@ -61,7 +61,12 @@
     <!-- Aquí va todo el código de three.js -->
     <script type="module">
       // 📚  Librerías importadas para hacer funcionar three.js y el OrbitControls
-      import * as THREE from 'three';
+      import {TextGeometry} from "./js/TextGeometry.js";
+    import {FontLoader} from "./js/FontLoader.js";
+    import * as THREE from 'three';
+    import { OrbitControls } from './js/OrbitControls.js';
+
+    import { RoundedBoxGeometry } from "./js/RoundedBoxGeometry.js";
         import { InteractionManager } from 'three/interactive';//añade libreria itneractiva
         import { TWEEN } from './js/tween.module.min.js'; // Libreria movimiento suave
         import { PointerLockControls } from 'three/PointerLockControls'; //control de camara
