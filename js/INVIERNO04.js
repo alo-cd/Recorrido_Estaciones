@@ -1108,6 +1108,38 @@ export default function INV04({x,y,z}){
     mesh113.rotation.set(0, 0, 0);
     //scene.add(mesh113);
 
+    //cartel
+    var geometry130 = new THREE.BoxGeometry(40, 2, 15, 1, 1, 1);
+        var material130 = new THREE.MeshLambertMaterial({ color: 0x1F618D });
+        var mesh130 = new THREE.Mesh(geometry130, material130);
+        mesh130.position.set(35, 45, 90);
+        mesh130.rotation.set(1.57, 0, 0);
+        //scene.add(mesh130); 
+        mesh130.receiveShadow = true;
+
+    //💙texto
+ var loader = new FontLoader();
+ var font = loader.parse(fontJSON);
+ var texto1 = new TextGeometry('Winter', {
+     font: font,
+     size: 6,
+     height: 2,
+ });
+
+ texto1.center();
+ var materialtexto1 = new THREE.MeshLambertMaterial(
+     {
+         color: 0x5F6A6A,
+         emissive: 0xA6ACAF,
+         shading: THREE.FlatShading
+     }
+ );
+
+ var meshtexto1 = new THREE.Mesh(texto1, materialtexto1);
+ meshtexto1.position.set(35, 45, 92);
+ //scene.add(meshtexto1);
+ meshtexto1.castShadow = true;
+
 const I04 = new THREE.Group();
 I04.add(
     mesh1,
@@ -1197,7 +1229,9 @@ mesh113,
 mesh114,
 mesh115,
 mesh116,
-mesh113
+mesh113,
+mesh130,
+meshtexto1
 );
 I04.position.set(x,y,z);
     return I04;
