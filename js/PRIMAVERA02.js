@@ -71,9 +71,9 @@ export default function PRIM02({x,y,z}){
       //scene.add(pino4);
       pino4.position.set(-10,1,-60);
 
-      var pino4 = pino1.clone();
-      //scene.add(pino4);
-      pino4.position.set(-230,1,-10);
+      var pino7 = pino1.clone();
+      //scene.add(pino7);
+      pino7.position.set(-230,1,-10);
 
       var pino5 = pino1.clone();
       //scene.add(pino5);
@@ -183,20 +183,20 @@ export default function PRIM02({x,y,z}){
 
 
         //sol
-        var geometry16 = new THREE.SphereGeometry(30, 50, 50);
-        var material16 = new THREE.MeshLambertMaterial({ color: 0xE4C818, side:THREE.DoubleSide});
-        var mesh16 = new THREE.Mesh(geometry16, material16);
-        mesh16.position.set(-250, 130, -100);
-        //scene.add(mesh16);
+        var geometry61 = new THREE.SphereGeometry(30, 50, 50);
+        var material61 = new THREE.MeshLambertMaterial({ color: 0xE4C818, side:THREE.DoubleSide});
+        var mesh61 = new THREE.Mesh(geometry61, material61);
+        mesh61.position.set(-250, 130, -100);
+        //scene.add(mesh61);
 
         //montañas
-        var geometry17 = new THREE.ConeGeometry(40,80,50,45);
+        var geometry67 = new THREE.ConeGeometry(40,80,50,45);
         var texturemont = new THREE.TextureLoader().load("./assets/cerro.jpg");
-        var material17 = new THREE.MeshLambertMaterial({ map: texturemont});
-        var mesh17 = new THREE.Mesh(geometry17, material17);
-        mesh17.position.set(-150,40, -65);
-        mesh17.rotation.set(0, 0, 0);
-        //scene.add(mesh17);
+        var material67 = new THREE.MeshLambertMaterial({ map: texturemont});
+        var mesh67 = new THREE.Mesh(geometry67, material67);
+        mesh67.position.set(-150,40, -65);
+        mesh67.rotation.set(0, 0, 0);
+        //scene.add(mesh67);
         texturemont.wrapS = THREE.RepeatWrapping;
         texturemont.wrapT = THREE.RepeatWrapping;
         texturemont.repeat.set(2, 2);
@@ -321,7 +321,7 @@ export default function PRIM02({x,y,z}){
       florm3.scale.set(0.50,0.50,0.50);
 
       var florm4 = florm.clone();
-      scene.add(florm4);
+      //scene.add(florm4);
       florm4.position.set(-125,1,-5);
       
       var florm5 = florm.clone();
@@ -625,46 +625,67 @@ meshtexto1.castShadow = true;
 
 const P02 = new THREE.Group();
 P02.add(
-    mesh1,
-mesh2,
-mesh3,
-pino1,
-pino2,
-pino3,
-pino4,
-pino5,
-flor1,
-flor2,
-flor3,
-flor4,
-flor5,
-flor6,
-arb,
-arb1,
-mesh16,
-mesh17,
-mesh27,
-nube,
-nube1,
-nube2,
-cab,
-cab1,
-cab2,
-cab3,
-florm,
-florm1,
-florm2,
-florm3,
-florm4,
-florm5,
-florm6,
-florm7,
-mesh30,
-mesh31,
-banca,
-banca1,
-mesh60,
-meshtexto01);
+  mesh1,
+  mesh2, 
+  mesh3,
+  pino1,
+  pino4,
+  pino5,
+  pino6,
+  pino7,
+  flor1,
+  flor2, 
+  flor3,
+  flor4,
+  flor5,
+  flor6,
+  arb,
+  arb1,
+  mesh61,
+  mesh67,
+  mesh27, 
+  nube,
+  nube1, 
+  nube2,
+  mesh19, 
+  mesh20, 
+  mesh21,
+  florm, 
+  florm1, 
+  florm2,
+  florm3,
+  florm4, 
+  florm5, 
+  florm6, 
+  florm7, 
+  mesh30, 
+  mesh31, 
+  banca, 
+  banca1, 
+  mesh34, 
+  mesh35, 
+  arbusto, 
+  arbusto1, 
+  mesh51,
+  mesh52,
+  mesh38, 
+  piedras,
+  piedritas, 
+  piedritas1,
+  piedritas2,
+  piedritas3,
+  piedritas4,
+  mesh41, 
+  mesh42, 
+  mesh43, 
+  mesh44, 
+  mesh45, 
+  mesh46, 
+  cisne,
+  cisnes,
+  mesh60,
+  meshtexto1,
+  mesh61);
 
 P02.position.set(x,y,z);
 return P02;
