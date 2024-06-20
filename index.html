@@ -68,8 +68,8 @@
       var scene = new THREE.Scene();
 
       var loader = new THREE.TextureLoader();
-      var bgTexture = loader.load ('./assets/concreto.jpg');
-      scene.background = bgTexture;
+        var bgTexture = loader.load('./assets/cielo.jpg');
+        scene.background = bgTexture;
 
       //🎥🎥 Agregar una cámara de perspectiva
       var camera = new THREE.PerspectiveCamera(
@@ -95,8 +95,28 @@ scene.add(gridHelper);
 var axesHelper = new THREE.AxesHelper (25);
 scene.add(axesHelper);
 
-var light = new THREE.AmbientLight (0xffffff,0.5);
-scene.add(light); 
+//🖤SOMBRA
+renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFShadowMap;
+
+        //🤍LUZ
+        var light1 = new THREE.AmbientLight(0xffffff,0.2);
+        light1.position.set(0,100,0);
+        scene.add(light1);
+
+        var light2= new THREE.AmbientLight(0xFFFFFF,0.5);
+        light2.position.set(60,60,100);
+        scene.add(light2);
+
+        var light5= new THREE.DirectionalLight(0xFFFFFF,0.5);
+        light5.position.set(20,100,100);
+        scene.add(light5);
+
+        var light3= new THREE.AmbientLight(0xfffff,0xFFFFFF,0.5);
+        light3.position.set(-20,60,0);
+
+        var light4= new THREE.AmbientLight(0xfffff,0xFFFFFF,0.5);
+        light4.position.set(-60,100,0);
 
 ///////////////////////
 
@@ -106,10 +126,10 @@ scene.add(EV1);
 const   EP2 = P02({x: -10, y:0, z:-10});
 scene.add(EP2);
 
-const   EO3 = O03({x: -100, y:0, z:-10});
+const   EO3 = O03({x: -10, y:0, z:-210});
 scene.add(EO3); 
 
-const   EI4 = I04({x: -100, y:0, z:-50});
+const   EI4 = I04({x: -10, y:0, z:-210});
 scene.add(EI4); 
 
 

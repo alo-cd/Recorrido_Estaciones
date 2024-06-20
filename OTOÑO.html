@@ -62,9 +62,10 @@
         // 🎬 Creando nueva escena - Es el espacio donde se colocan los objetos
         var scene = new THREE.Scene();
 
-        var loader = new THREE.TextureLoader();
+      var loader = new THREE.TextureLoader();
         var bgTexture = loader.load('./assets/cielo.jpg');
         scene.background = bgTexture;
+
 
         //🎥🎥 Agregar una cámara de perspectiva
         var camera = new THREE.PerspectiveCamera(
