@@ -3,9 +3,7 @@ import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";
 import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
-export default function INV04({ x, y, z }) {
-
-
+export default function INV04({x,y,z}){
 
     //casita
     var geometry1 = new RoundedBoxGeometry(20, 20, 20, 10, 0.5);
@@ -500,7 +498,7 @@ export default function INV04({ x, y, z }) {
     lampara8.scale.set(0.99, 0.99, 0.9);
     lampara8.rotation.set(0, 0, 0);
 
-    //muñeco de nieve
+    //muï¿½eco de nieve
     var geometry42 = new THREE.SphereGeometry(5, 50, 50);
     var material42 = new THREE.MeshLambertMaterial({ color: 0xF6F6F6 });
     var mesh42 = new THREE.Mesh(geometry42, material42);
@@ -571,22 +569,22 @@ export default function INV04({ x, y, z }) {
     mesh51.rotation.set(0, 0, 3.93);
     //scene.add(mesh51);
 
-    //muñeco agrupado
-    var muñeco1 = new THREE.Group();
-    muñeco1.add(mesh42, mesh43, mesh44, mesh45, mesh46, mesh47, mesh48, mesh49, mesh50, mesh51);
-    scene.add(muñeco1);
+    //muÃ±eco agrupado
+    var muÃ±eco1 = new THREE.Group();
+    muÃ±eco1.add(mesh42, mesh43, mesh44, mesh45, mesh46, mesh47, mesh48, mesh49, mesh50, mesh51);
+    scene.add(muÃ±eco1);
 
-    var muñeco2 = muñeco1.clone();
-    scene.add(muñeco2);
-    muñeco2.position.set(100, 0, 50);
-    muñeco2.scale.set(1, 1, 1);
-    muñeco2.rotation.set(0, 0, 0);
+    var muÃ±eco2 = muÃ±eco1.clone();
+    scene.add(muÃ±eco2);
+    muÃ±eco2.position.set(100, 0, 50);
+    muÃ±eco2.scale.set(1, 1, 1);
+    muÃ±eco2.rotation.set(0, 0, 0);
 
-    var muñeco3 = muñeco1.clone();
-    scene.add(muñeco3);
-    muñeco3.position.set(-65, 0, 75);
-    muñeco3.scale.set(1.5, 1.5, 1.5);
-    muñeco3.rotation.set(0, 0, 0);
+    var muÃ±eco3 = muÃ±eco1.clone();
+    scene.add(muÃ±eco3);
+    muÃ±eco3.position.set(-65, 0, 75);
+    muÃ±eco3.scale.set(1.5, 1.5, 1.5);
+    muÃ±eco3.rotation.set(0, 0, 0);
 
 
 
@@ -966,7 +964,7 @@ export default function INV04({ x, y, z }) {
     mesh96.rotation.set(0, 0, 0);
     scene.add(mesh96);
 
-    //montañas
+    //montaï¿½as
     var geometry97 = new THREE.ConeGeometry(55, 90, 50, 50);
     var texture9 = new THREE.TextureLoader().load("./assets/nieve1.jpg");
     var material97 = new THREE.MeshLambertMaterial({ map: texture9 });
@@ -1109,10 +1107,10 @@ export default function INV04({ x, y, z }) {
     mesh113.position.set(190, 78, 30);
     mesh113.rotation.set(0, 0, 0);
     scene.add(mesh113);
-}
+
 const I04 = new THREE.Group();
 I04.add(
-    mesh1,
+mesh1,
 mesh2,
 mesh103,
 mesh3,
@@ -1156,9 +1154,9 @@ lampara5,
 lampara6,
 lampara7,
 lampara8,
-muñeco1, 
-muñeco2 ,
-muñeco3,
+muÃ±eco1, 
+muÃ±eco2 ,
+muÃ±eco3,
 vagon1,
 vagon2,
 vagon3,
@@ -1199,8 +1197,7 @@ mesh113,
 mesh114,
 mesh115,
 mesh116,
-mesh113
-);
-I04.position.set(x, y, z);
-return V01;
+mesh113);
+I04.position.set(x,y,z);
+    return I04;
 }
