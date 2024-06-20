@@ -7,11 +7,18 @@ export default function VER01({x,y,z}){
 
     //playa
     var geometry20 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
-    var material20 = new THREE.MeshLambertMaterial({ color: 0xC6A664 });
+    var texture2 = new THREE.TextureLoader().load("./assets/arena1.jpg");
+    var material20 = new THREE.MeshLambertMaterial({ map: texture2 });
     var mesh20 = new THREE.Mesh(geometry20, material20);
     mesh20.position.set(125, -0.3, 0);
-    mesh20.rotation.set(0,0,0);
-    //scene.add(mesh20); 
+    mesh20.rotation.set(0, 0, 0);
+    //scene.add(mesh20);
+    texture2.wrapS = THREE.RepeatWrapping;
+    texture2.wrapT = THREE.RepeatWrapping;
+    texture2.repeat.set(2, 2);
+    texture2.rotation = 0.785;
+    texture2.offset.x = -0.22;
+    texture2.offset.y = -0.5;
 
     //puesto de helados
     var geometry1 = new RoundedBoxGeometry(15, 20, 10, 10, 0.5);
@@ -87,11 +94,18 @@ export default function VER01({x,y,z}){
 
     //alberca1
     var geometry21 = new THREE.CylinderGeometry(40, 35, 5, 20, 35);
-    var material21 = new THREE.MeshLambertMaterial({ color: 0x03a7bb, side: THREE.DoubleSide });
+    var texture1 = new THREE.TextureLoader().load("./assets/agua2.jpg");
+    var material21 = new THREE.MeshLambertMaterial({ map: texture1 });
     var mesh21 = new THREE.Mesh(geometry21, material21);
     mesh21.position.set(45, 3, -30);
     mesh21.rotation.set(0, 0, 0);
-    //scene.add(mesh21); 
+    //scene.add(mesh21);
+    texture1.wrapS = THREE.RepeatWrapping;
+    texture1.wrapT = THREE.RepeatWrapping;
+    texture1.repeat.set(2, 2);
+    texture1.rotation = 0.785;
+    texture1.offset.x = -0.22;
+    texture1.offset.y = -0.5;
 
     var geometry22 = new THREE.TorusGeometry(40, 3, 20, 20);
     var material22 = new THREE.MeshNormalMaterial({ color: 0XFFFFFF, side: THREE.DoubleSide });
@@ -102,11 +116,18 @@ export default function VER01({x,y,z}){
 
     //alberca 2 con tobogan
     var geometry30 = new THREE.CylinderGeometry(55, 45, 5, 20, 35);
-    var material30 = new THREE.MeshLambertMaterial({ color: 0x03a7bb, side: THREE.DoubleSide });
+    var texture2 = new THREE.TextureLoader().load("./assets/agua2.jpg");
+    var material30 = new THREE.MeshLambertMaterial({ map: texture2 });
     var mesh30 = new THREE.Mesh(geometry30, material30);
     mesh30.position.set(190, 2, -35);
     mesh30.rotation.set(0, 0, 0);
-    //scene.add(mesh30); 
+    //scene.add(mesh30);
+    texture2.wrapS = THREE.RepeatWrapping;
+    texture2.wrapT = THREE.RepeatWrapping;
+    texture2.repeat.set(2, 2);
+    texture2.rotation = 0.785;
+    texture2.offset.x = -0.22;
+    texture2.offset.y = -0.5; 
 
     var geometry35 = new THREE.TorusGeometry(55, 3, 20, 20);
     var material35 = new THREE.MeshLambertMaterial({ color: 0XFFFFFF, side: THREE.DoubleSide });
@@ -216,11 +237,18 @@ export default function VER01({x,y,z}){
 
     //pelotas e inflables
     var geometry36 = new THREE.TorusGeometry(4, 3, 20, 20);
-    var material36 = new THREE.MeshLambertMaterial({ color: 0xFD76DA });
+    var texture6 = new THREE.TextureLoader().load("./assets/plastico1.jpg");
+    var material36 = new THREE.MeshLambertMaterial({ map: texture6 });
     var mesh36 = new THREE.Mesh(geometry36, material36);
     mesh36.position.set(32, 6, -39);
     mesh36.rotation.set(1.57, 0, 0);
-    //scene.add(mesh36); 
+    //scene.add(mesh36);
+    texture6.wrapS = THREE.RepeatWrapping;
+    texture6.wrapT = THREE.RepeatWrapping;
+    texture6.repeat.set(2, 2);
+    texture6.rotation = 0.785;
+    texture6.offset.x = -0.22;
+    texture6.offset.y = -0.5;
 
     var geometry53 = new THREE.TorusGeometry(4, 3, 20, 20);
     var material53 = new THREE.MeshLambertMaterial({ color: 0xAA2BFE });
@@ -379,11 +407,18 @@ export default function VER01({x,y,z}){
 
     //arbol icosahedron
     var geometry51 = new THREE.IcosahedronGeometry(10, 0);
-    var material51 = new THREE.MeshLambertMaterial({ color: 0x84C93B });
+    var texture4 = new THREE.TextureLoader().load("./assets/arbol3.jpg");
+    var material51 = new THREE.MeshLambertMaterial({ map: texture4 });
     var mesh51 = new THREE.Mesh(geometry51, material51);
     mesh51.position.set(56, 28, 90);
     mesh51.rotation.set(0, 0, 0);
     //scene.add(mesh51);
+    texture4.wrapS = THREE.RepeatWrapping;
+    texture4.wrapT = THREE.RepeatWrapping;
+    texture4.repeat.set(2, 2);
+    texture4.rotation = 0.785;
+    texture4.offset.x = -0.22;
+    texture4.offset.y = -0.5;
 
     var geometry52 = new THREE.CylinderGeometry(3, 3, 30, 50);
     var material52 = new THREE.MeshLambertMaterial({ color: 0xA87848 });
@@ -524,11 +559,18 @@ export default function VER01({x,y,z}){
 
     //arbol octahedron
     var geometry74 = new THREE.DodecahedronGeometry(10, 0);
-    var material74 = new THREE.MeshLambertMaterial({ color: 0x84C93B });
+    var texture3 = new THREE.TextureLoader().load("./assets/arbol3.jpg");
+    var material74 = new THREE.MeshLambertMaterial({ map: texture3 });
     var mesh74 = new THREE.Mesh(geometry74, material74);
     mesh74.position.set(6, 28, -90);
     mesh74.rotation.set(0, 0, 0);
     //scene.add(mesh74);
+    texture3.wrapS = THREE.RepeatWrapping;
+    texture3.wrapT = THREE.RepeatWrapping;
+    texture3.repeat.set(2, 2);
+    texture3.rotation = 0.785;
+    texture3.offset.x = -0.22;
+    texture3.offset.y = -0.5;
 
     var geometry75 = new THREE.CylinderGeometry(3, 3, 30, 50);
     var material75 = new THREE.MeshLambertMaterial({ color: 0xA87848 });
