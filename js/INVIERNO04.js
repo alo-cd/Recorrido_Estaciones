@@ -11,14 +11,14 @@ export default function INV04({x,y,z}){
     var mesh1 = new THREE.Mesh(geometry1, material1);
     mesh1.position.set(150, 10, 0);
     mesh1.rotation.set(0, 0, 0);
-    scene.add(mesh1);
+    //scene.add(mesh1);
 
     var geometry2 = new THREE.ConeGeometry(15, 15, 4);
     var material2 = new THREE.MeshLambertMaterial({ color: 0xCB914F });
     var mesh2 = new THREE.Mesh(geometry2, material2);
     mesh2.position.set(150, 27, 0);
     mesh2.rotation.set(0, 0.78, 0);
-    scene.add(mesh2);
+    //scene.add(mesh2);
 
     //camino casita
     var geometry103 = new RoundedBoxGeometry(23, 3, 90, 10, 1.5);
@@ -27,7 +27,7 @@ export default function INV04({x,y,z}){
     var mesh103 = new THREE.Mesh(geometry103, material103);
     mesh103.position.set(150, 2, 45);
     mesh103.rotation.set(0, 0, 0);
-    scene.add(mesh103);
+    //scene.add(mesh103);
     texture7.wrapS = THREE.RepeatWrapping;
     texture7.wrapT = THREE.RepeatWrapping;
     texture7.repeat.set(1, 1);

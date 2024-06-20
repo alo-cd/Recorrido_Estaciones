@@ -3,7 +3,7 @@ import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";
 import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
-export default function VER01({x,y,z}){
+export default function PRIM01({x,y,z}){
 
   //personaje y 
         //pasto
