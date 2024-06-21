@@ -3,17 +3,11 @@ import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";
 import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
+
 export default function PRIM01({x,y,z}){
 
   //personaje y 
-        //pasto
-        var geometry1 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
-        var texture1 = new THREE.TextureLoader().load("./assets/pasto.jpg");
-        var material1 = new THREE.MeshLambertMaterial({ map: texture1});
-        var mesh1 = new THREE.Mesh(geometry1, material1);
-        mesh1.position.set(-125, 0, 0);
-        mesh1.rotation.set(0, 0, 0);
-        //scene.add(mesh1);
+    
         
         //cerritos
         var geometry2 = new THREE.ConeGeometry(60,100,95,100);
@@ -568,42 +562,6 @@ mesh43.rotation.set(0,0,0);
 
 
 
-      
-
-               //cartel
-       var geometry60 = new THREE.BoxGeometry(40, 1, 15, 1, 1, 1);
-        var material60 = new THREE.MeshLambertMaterial({ color: 0x21AD92 });
-        var mesh60 = new THREE.Mesh(geometry60, material60);
-        mesh60.position.set(-220, 25, 85);
-        mesh60.rotation.set(1.57, 0, 0);
-        //scene.add(mesh60); 
-        mesh60.receiveShadow = true;
-
-        //💙texto
-        var loader = new FontLoader();
-        var font = loader.parse(fontJSON);
-        var texto1 = new TextGeometry('Spring', {
-            font: font,
-            size: 6,
-            height: 2,
-        });
-
-texto1.center();
-var materialtexto1 = new THREE.MeshLambertMaterial(
-    {
-        color: 0x2CCFE2,
-        emissive: 0x2CCFE2,
-        shading: THREE.FlatShading
-    }
-);
-
-var meshtexto1 = new THREE.Mesh(texto1, materialtexto1);
-meshtexto1.position.set(-220, 25, 88);
-//scene.add(meshtexto1);
-meshtexto1.castShadow = true;
-
-
-
 const P02 = new THREE.Group();
 P02.add(
   mesh1,
@@ -664,8 +622,6 @@ P02.add(
   mesh46, 
   cisne,
   cisnes,
-  mesh60,
-  meshtexto1,
   mesh61);
 
 P02.position.set(x,y,z);

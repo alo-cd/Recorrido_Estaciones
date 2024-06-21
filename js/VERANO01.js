@@ -1,24 +1,11 @@
 import * as THREE from "./three.module.js";
 import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";
-import { TextGeometry } from "./TextGeometry.js";
-import { FontLoader } from "./FontLoader.js";
+import { FontLoader } from "./js/FontLoader.js";
+
 
 export default function VER01({x,y,z}){
 
-    //playa
-    var geometry20 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
-    var texture2 = new THREE.TextureLoader().load("./assets/arena1.jpg");
-    var material20 = new THREE.MeshLambertMaterial({ map: texture2 });
-    var mesh20 = new THREE.Mesh(geometry20, material20);
-    mesh20.position.set(125, -0.3, 0);
-    mesh20.rotation.set(0, 0, 0);
-    //scene.add(mesh20);
-    texture2.wrapS = THREE.RepeatWrapping;
-    texture2.wrapT = THREE.RepeatWrapping;
-    texture2.repeat.set(2, 2);
-    texture2.rotation = 0.785;
-    texture2.offset.x = -0.22;
-    texture2.offset.y = -0.5;
+   
 
     //puesto de helados
     var geometry1 = new RoundedBoxGeometry(15, 20, 10, 10, 0.5);
@@ -448,37 +435,7 @@ export default function VER01({x,y,z}){
     //scene.add(arbol5);
     arbol5.position.set(-40, 0, -75);
 
-    //cartel
-    var geometry60 = new THREE.BoxGeometry(40, 2, 15, 1, 1, 1);
-    var material60 = new THREE.MeshLambertMaterial({ color: 0xF8BC32 });
-    var mesh60 = new THREE.Mesh(geometry60, material60);
-    mesh60.position.set(35, 45, 90);
-    mesh60.rotation.set(1.57, 0, 0);
-    //scene.add(mesh60); 
-    mesh60.receiveShadow = true;
-
-    //💙texto
-    var loader = new FontLoader();
-    var font = loader.parse(fontJSON);
-    var texto1 = new TextGeometry('Summer', {
-        font: font,
-        size: 6,
-        height: 2,
-    });
-
-    texto1.center();
-    var materialtexto1 = new THREE.MeshLambertMaterial(
-        {
-            color: 0xFBFF03,
-            emissive: 0xF8D24F,
-            shading: THREE.FlatShading
-        }
-    );
-
-    var meshtexto1 = new THREE.Mesh(texto1, materialtexto1);
-    meshtexto1.position.set(35, 45, 92);
-    //scene.add(meshtexto1);
-    meshtexto1.castShadow = true;
+    
 
     //puesto de flotadores
     var geometry54 = new RoundedBoxGeometry(15, 20, 10, 10, 0.5);
@@ -662,8 +619,6 @@ export default function VER01({x,y,z}){
         arbol3, 
         arbol4, 
         arbol5, 
-        mesh60, 
-        meshtexto1, 
         mesh54, 
         mesh55, 
         mesh56,

@@ -3,17 +3,8 @@ import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";
 import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
-export default function OTO03({x,y,z}){
 
-    //personaje y 
-        //piso
-        var geometry1 = new THREE.BoxGeometry(250, 2, 200, 1, 1, 1);
-        var texture5 = new THREE.TextureLoader().load("./assets/hojas.jpg");
-        var material1 = new THREE.MeshLambertMaterial({ map: texture5});
-        var mesh1 = new THREE.Mesh(geometry1, material1);
-        mesh1.position.set(-125, 0, 0);
-        mesh1.rotation.set(0, 0, 0);
-        //scene.add(mesh1);
+export default function OTO03({x,y,z}){
 
         //pinos
         var geometry4= new THREE.CylinderGeometry(5,5,30,10,10,false,3.5);
@@ -573,37 +564,7 @@ export default function OTO03({x,y,z}){
         mesh59.rotation.set(0.785, 0,-1.57);
         //scene.add(mesh59);
 
-        //cartel
-       var geometry60 = new THREE.BoxGeometry(30, 1, 15, 1, 1, 1);
-        var material60 = new THREE.MeshLambertMaterial({ color: 0x3E1282 });
-        var mesh60 = new THREE.Mesh(geometry60, material60);
-        mesh60.position.set(-220, 50, 85);
-        mesh60.rotation.set(1.57, 0, 0);
-        //scene.add(mesh60); 
-        mesh60.receiveShadow = true;
-
-        //💙texto
-        var loader = new FontLoader();
-        var font = loader.parse(fontJSON);
-        var texto1 = new TextGeometry('Fall', {
-            font: font,
-            size: 6,
-            height: 2,
-        });
-
-texto1.center();
-var materialtexto1 = new THREE.MeshLambertMaterial(
-    {
-        color: 0xB3B0B6,
-        emissive: 0x6B676E,
-        shading: THREE.FlatShading
-    }
-);
-
-var meshtexto1 = new THREE.Mesh(texto1, materialtexto1);
-meshtexto1.position.set(-220, 50, 88);
-//scene.add(meshtexto1);
-meshtexto1.castShadow = true;
+        
 
 const O03 = new THREE.Group();
 O03.add(
@@ -682,8 +643,7 @@ O03.add(
     mesh58,
     mesh61,
     mesh59,
-    mesh60,
-    meshtexto1)
+  )
     O03.position.set(x,y,z);
 return O03;
 }
